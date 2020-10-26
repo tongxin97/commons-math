@@ -103,6 +103,9 @@ public class EnumeratedRealDistribution
             probabilities[index] = entry.getValue().intValue() / denom;
             index++;
         }
+        for (int i = 0; i < values.length; i++) {
+            System.out.printf("v %.1f, p %.20f\n", values[i], probabilities[i]);
+        }
         innerDistribution = new EnumeratedDistribution<>(createDistribution(values, probabilities));
     }
 

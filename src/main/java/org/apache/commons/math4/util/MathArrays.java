@@ -907,6 +907,7 @@ public class MathArrays {
             }
             if (!Double.isNaN(values[i])) {
                 sum += values[i];
+                System.out.printf("s: %.20f, v[i]: %.20f\n", sum, values[i]);
             }
         }
         if (sum == 0) {
@@ -917,6 +918,9 @@ public class MathArrays {
                 out[i] = Double.NaN;
             } else {
                 out[i] = values[i] * normalizedSum / sum;
+                if (values[i] == 0.5) {
+                    // System.out.printf("v: %.1f, ns: %.20f, s: %.20f, out[i] %.20f\n", values[i], normalizedSum, sum, out[i]);
+                }
             }
         }
         return out;

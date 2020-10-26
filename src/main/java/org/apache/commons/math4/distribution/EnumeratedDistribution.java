@@ -133,7 +133,7 @@ public class EnumeratedDistribution<T> implements Serializable {
                 probability += probabilities[i];
             }
         }
-
+        System.out.printf("final p: %.20f\n", probability);
         return probability;
     }
 
